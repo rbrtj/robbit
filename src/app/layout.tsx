@@ -1,3 +1,5 @@
+import Navbar from '@/components/Navbar';
+import { Toaster } from '@/components/ui/Toaster';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
@@ -22,11 +24,12 @@ export default function RootLayout({
         inter.className
       )}
     >
-      <body className="min-h-screen pt-12 bg-slate-500 antialiased">
-        {/* <Navbar /> */}
+      <body className="min-h-screen pt-12 bg-slate-50 antialiased">
+        <Navbar />
         <div className="container max-w-7xl mx-auto h-full pt-12">
           {children}
         </div>
+        <Toaster />
       </body>
     </html>
   );
