@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import UserAuthForm from './UserAuthForm';
 
+// TODO: Fix close button on modal.
 const SignUp = () => {
   return (
     <div className="container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
