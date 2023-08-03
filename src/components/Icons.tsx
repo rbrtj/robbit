@@ -1,4 +1,4 @@
-import { LucideProps } from 'lucide-react';
+import { LucideProps, User } from 'lucide-react';
 
 export const Icons = {
   google: (props: LucideProps) => (
@@ -37,4 +37,5 @@ export const Icons = {
       </g>
     </svg>
   ),
+  user: User,
 };
