@@ -1,8 +1,13 @@
+'use client';
 import Link from 'next/link';
 import UserAuthForm from './UserAuthForm';
+import { FC } from 'react';
 
-// TODO: Fix close button on modal.
-const SignUp = () => {
+interface SignUpProps {
+  isModal?: boolean;
+}
+
+const SignUp: FC<SignUpProps> = ({ isModal = false }) => {
   return (
     <div className="container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
       <div className="flex flex-col space-y-2 text-center">
@@ -17,6 +22,7 @@ const SignUp = () => {
           <Link
             href="/sign-in"
             className="hover:text-zinc-800 text-sm underline underline-offset-4"
+            replace={isModal}
           >
             Sign in
           </Link>

@@ -1,7 +1,13 @@
+'use client';
 import Link from 'next/link';
 import UserAuthForm from './UserAuthForm';
+import { FC } from 'react';
 
-const SignIn = () => {
+interface SignInProps {
+  isModal?: boolean;
+}
+
+const SignIn: FC<SignInProps> = ({ isModal = false }) => {
   return (
     <div className="container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
       <div className="flex flex-col space-y-2 text-center">
@@ -16,6 +22,7 @@ const SignIn = () => {
           <Link
             href="/sign-up"
             className="hover:text-zinc-800 text-sm underline underline-offset-4"
+            replace={isModal}
           >
             Sign up
           </Link>
