@@ -36,6 +36,7 @@ const Page = async ({ params }: PageProps) => {
         r/{subreddit.name}
       </h1>
       <SmallCreatePost session={session} />
+      {/* Show posts */}
     </>
   );
 };
